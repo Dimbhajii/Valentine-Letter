@@ -21,7 +21,7 @@ envelope.addEventListener("click", () => {
 
 // Logic to move the NO btn
 
-noBtn.addEventListener("mouseover", () => {
+function moveNoBtn() {
     const btnW = noBtn.offsetWidth;
     const btnH = noBtn.offsetHeight;
     const padding = 20;
@@ -38,7 +38,18 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.transform = "none";
     noBtn.style.transition = "left 0.3s ease, top 0.3s ease";
     noBtn.style.zIndex = "999";
-});
+}
+
+const isMobile = "ontouchstart" in window;
+
+if (isMobile) {
+    noBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        moveNoBtn();
+    });
+} else {
+    noBtn.addEventListener("mouseover", moveNoBtn);
+}
 
 // Logic to make YES btn to grow
 
