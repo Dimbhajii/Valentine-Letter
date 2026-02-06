@@ -14,6 +14,9 @@ const finalText = document.getElementById("final-text");
 envelope.addEventListener("click", () => {
     envelope.style.display = "none";
     letter.style.display = "flex";
+    document.body.style.backgroundImage = 'url("couple-bg.jpeg")';
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
 
     setTimeout( () => {
         document.querySelector(".letter-window").classList.add("open");
