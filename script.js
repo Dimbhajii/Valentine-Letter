@@ -22,19 +22,21 @@ envelope.addEventListener("click", () => {
 // Logic to move the NO btn
 
 function moveNoBtn() {
-    const btnW = noBtn.offsetWidth;
-    const btnH = noBtn.offsetHeight;
-    const padding = 20;
+    const vw = document.documentElement.clientWidth;
+    const vh = document.documentElement.clientHeight;
+    const margin = 40;
 
-    const maxX = window.innerWidth - btnW - padding;
-    const maxY = window.innerHeight - btnH - padding;
+    const minX = margin;
+    const minY = margin;
+    const maxX = vw - 120 - margin;
+    const maxY = vh - 60 - margin;
 
-    const newX = Math.random() * maxX + padding;
-    const newY = Math.random() * maxY + padding;
+    const newX = Math.floor(Math.random() * (maxX - minX)) + minX;
+    const newY = Math.floor(Math.random() * (maxY - minY)) + minY;
 
     noBtn.style.position = "fixed";
-    noBtn.style.left = newX + "px";
-    noBtn.style.top = newY + "px";
+    noBtn.style.left = Math.max(10, Math.min(newX, vw - 130)) + "px";
+    noBtn.style.top = Math.max(10, Math.min(newY, vh - 70)) + "px";
     noBtn.style.transform = "none";
     noBtn.style.transition = "left 0.3s ease, top 0.3s ease";
     noBtn.style.zIndex = "999";
