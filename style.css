@@ -8,6 +8,19 @@ body {
     font-family: "Pixelify Sans", sans-serif;
 }
 
+/* Couple Photo */
+.couple-photo {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 120px;
+    border-radius: 10px;
+    transform: rotate(5deg);
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    object-fit: cover;
+}
+
 /* Envelope Screen */
 #envelope-container {
     text-align: center;
