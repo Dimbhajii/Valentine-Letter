@@ -15,11 +15,7 @@ envelope.addEventListener("click", () => {
     envelope.style.display = "none";
     letter.style.display = "flex";
     setTimeout( () => {
-        const win = document.querySelector(".letter-window");
-        win.classList.add("open");
-        win.style.backgroundImage = 'url("couple-bg.jpeg")';
-        win.style.backgroundSize = "cover";
-        win.style.backgroundPosition = "center";
+        document.querySelector(".letter-window").classList.add("open");
     },50);
 });
 
