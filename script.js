@@ -76,6 +76,19 @@ if (isMobile) {
 
 // YES is clicked
 
+function typeWriter(element, text, speed) {
+    let i = 0;
+    element.textContent = "";
+    function type() {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
 yesBtn.addEventListener("click", () => {
     title.textContent = "Yippeeee!";
 
@@ -86,4 +99,5 @@ yesBtn.addEventListener("click", () => {
     buttons.style.display = "none";
 
     finalText.style.display = "block";
+    typeWriter(finalText, "I am still your friend if you feel lonely just call me, i am very awkward i do not know how to convey things and lots of other things but i care for you and id still be here for you as a gay friend of yours lol", 40);
 });
