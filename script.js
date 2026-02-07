@@ -98,6 +98,15 @@ couplePhoto.addEventListener("click", () => {
     typeWriter(coupleText, "nothing here, fuck you", 40);
 });
 
+// Click cat tummy
+const catTummy = document.getElementById("cat-tummy");
+const catText = document.getElementById("cat-text");
+
+catTummy.addEventListener("click", () => {
+    catText.style.display = "block";
+    typeWriter(catText, "yes i have a tummy", 40);
+});
+
 yesBtn.addEventListener("click", () => {
     title.textContent = "Yippeeee!";
 
