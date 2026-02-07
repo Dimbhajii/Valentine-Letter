@@ -118,4 +118,43 @@ yesBtn.addEventListener("click", () => {
 
     finalText.style.display = "block";
     typeWriter(finalText, "I am still your friend if you feel lonely just call me, i am very awkward i do not know how to convey things and lots of other things but i care for you and id still be here for you as a gay friend of yours lol", 40);
+
+    // Show the reply link after typewriter finishes
+    const textLength = 211; // length of the message above
+    setTimeout(() => {
+        document.getElementById("love-clickable").style.display = "block";
+    }, textLength * 40 + 500);
+});
+
+// Reply system
+const loveClickable = document.getElementById("love-clickable");
+const replyContainer = document.getElementById("reply-container");
+const replyInput = document.getElementById("reply-input");
+const replySend = document.getElementById("reply-send");
+const replyText = document.getElementById("reply-text");
+
+loveClickable.addEventListener("click", () => {
+    loveClickable.style.display = "none";
+    replyContainer.style.display = "flex";
+    replyInput.focus();
+});
+
+replySend.addEventListener("click", () => {
+    const message = replyInput.value.trim();
+    if (!message) return;
+
+    replyContainer.style.display = "none";
+    replyText.style.display = "block";
+    typeWriter(replyText, message, 40);
+
+    // Send email via Web3Forms
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            access_key: "b5becc35-d0fa-4400-97e3-0839c1c5482b",
+            subject: "Reply from Valentine Letter",
+            message: message
+        })
+    });
 });
