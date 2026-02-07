@@ -89,6 +89,15 @@ function typeWriter(element, text, speed) {
     type();
 }
 
+// Click couple photo
+const couplePhoto = document.getElementById("couple-photo");
+const coupleText = document.getElementById("couple-text");
+
+couplePhoto.addEventListener("click", () => {
+    coupleText.style.display = "block";
+    typeWriter(coupleText, "nothing here, fuck you", 40);
+});
+
 yesBtn.addEventListener("click", () => {
     title.textContent = "Yippeeee!";
 

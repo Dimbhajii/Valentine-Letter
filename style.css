@@ -23,6 +23,22 @@ body {
     box-shadow: 2px 3px 10px rgba(0,0,0,0.3);
     z-index: 10;
     object-fit: cover;
+    cursor: pointer;
+}
+
+.couple-text {
+    position: fixed;
+    top: 140px;
+    right: 15px;
+    font-size: 16px;
+    background-color: rgba(255,240,240,0.9);
+    padding: 8px 14px;
+    border-radius: 10px;
+    z-index: 10;
+    max-width: 180px;
+    border-right: 3px solid #333;
+    animation: blink-cursor 0.7s step-end infinite;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
 }
 
 /* Envelope Screen */
