@@ -95,7 +95,7 @@ const coupleText = document.getElementById("couple-text");
 
 couplePhoto.addEventListener("click", () => {
     coupleText.style.display = "block";
-    typeWriter(coupleText, "nothing here, fuck you", 40);
+    typeWriter(coupleText, "Beauty and the beast", 40);
 });
 
 // Click cat tummy
