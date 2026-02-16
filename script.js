@@ -89,22 +89,13 @@ function typeWriter(element, text, speed) {
     type();
 }
 
-// Click couple photo
-const couplePhoto = document.getElementById("couple-photo");
-const coupleText = document.getElementById("couple-text");
-
-couplePhoto.addEventListener("click", () => {
-    coupleText.style.display = "block";
-    typeWriter(coupleText, "Beauty and the beast", 40);
-});
-
 // Click cat tummy
 const catTummy = document.getElementById("cat-tummy");
 const catText = document.getElementById("cat-text");
 
 catTummy.addEventListener("click", () => {
     catText.style.display = "block";
-    typeWriter(catText, "yes i have a tummy", 40);
+    typeWriter(catText, "fuck you (2)", 40);
 });
 
 yesBtn.addEventListener("click", () => {
@@ -117,10 +108,10 @@ yesBtn.addEventListener("click", () => {
     buttons.style.display = "none";
 
     finalText.style.display = "block";
-    typeWriter(finalText, "I am still your friend if you feel lonely just call me, i am very awkward i do not know how to convey things and lots of other things but i care for you and id still be here for you as a gay friend of yours lol", 40);
+    typeWriter(finalText, "fuck you", 40);
 
     // Show the reply link after typewriter finishes
-    const textLength = 211; // length of the message above
+    const textLength = 8; // length of the message above
     setTimeout(() => {
         document.getElementById("love-clickable").style.display = "block";
     }, textLength * 40 + 500);
